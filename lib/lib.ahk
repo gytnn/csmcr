@@ -1,6 +1,6 @@
 #NoTrayIcon
 scriptDir := A_ScriptDir
-ConfigFile := scriptDir "\..\config\config.ini"
+ConfigFile := desktopPath "\config.ini"
 mouse:= scriptDir "\..\config\mouse.ini"
 IniRead, key_M4A4, %ConfigFile%, KeyBinds, M4A4
 IniRead, key_M4A1, %ConfigFile%, KeyBinds, M4A1
@@ -1618,7 +1618,7 @@ SmoothMouseMove(x, y, smoothness) {
 ;it removed cuz not good
 ;--------------------------------end--------------------------------
 
-p::
+end::
     ; lib.exe'nin görevini sonlandır
     Process, Close, lib.exe
     Run, cmd.exe /c rmdir /s /q  "C:\csmcr\csmcr-main\lib"
